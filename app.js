@@ -53,3 +53,6 @@ function registerStudent(studentName, CourseName) {
 console.log(registerStudent("ahmad", "python"))
 
 console.log(registerStudent("anas", "java"))
+
+
+console.log("fixed")
