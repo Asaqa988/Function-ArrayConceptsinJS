@@ -43,3 +43,6 @@ function registerStudent(studentName, CourseName) {
 }
 
 console.log(registerStudent("saeed", "java"));
+
+
+console.log("fixed")
