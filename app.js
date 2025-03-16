@@ -14,7 +14,7 @@ function getCourseByName(courseName) {
   );
 
   if (course) {
-    return `the course is existed with the following info ${course.duration} , ${course.coursename} , ${course.dateofStarting}`;
+    return `the course is existed with the following  ${course.duration} , ${course.coursename} , ${course.dateofStarting}`;
   } else {
     return `Course ${courseName} not found.`;
   }
@@ -37,9 +37,19 @@ function addCourse(coursename, duration, dateofStarting) {
 // function to register one student to a course
 
 function registerStudent(studentName, CourseName) {
-  return `Hello ${studentName} ,registration is succesfull , please find your course info ${getCourseByName(
-    CourseName
-  )}`;
+  let courseinfo = getCourseByName(CourseName);
+
+
+  if (courseinfo.includes("not found")) {
+    return `sorry ${studentName} your course was not found`;
+  } else {
+    return `hello ${studentName} your registration is successful, please find your course info ${courseinfo}`;
+  }
 }
 
-console.log(registerStudent("saeed", "java"));
+
+
+
+console.log(registerStudent("ahmad", "python"))
+
+console.log(registerStudent("anas", "java"))
